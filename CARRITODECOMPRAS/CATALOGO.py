@@ -22,9 +22,9 @@ def cargar_catalogo():
     return catalogo
 
 def mostrar_catalogo(catalogo):
-    print("--- CATÁLOGO DE PRODUCTOS ---")
-    print(f"{'Código':<8} | {'Nombre':<12} | {'Precio':<8} | {'Stock':<6}")
-    print("-" * 45)
+    print("--------- CATÁLOGO DE PRODUCTOS ---------")
+    print(f"{'Código':<8} | {'Nombre':<12} | {'Precio':<8} | {'Existencias':<10}")
+    print("-" * 40)
     
     # Recorremos cada producto del diccionario
     for codigo, info in catalogo.items():
