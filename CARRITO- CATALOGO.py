@@ -1,0 +1,28 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Sep 16 16:39:30 2026
+
+@author: Usuario
+"""
+
+def cargar_catalogo():
+    catalogo = {
+        "P001": {"nombre": "Café", "precio": 45.0, "stock": 20},
+        "P002": {"nombre": "Té", "precio": 30.0, "stock": 15},
+        "P003": {"nombre": "Galleta", "precio": 15.0, "stock": 50}
+    }
+    return catalogo
+
+def mostrar_catalogo(catalogo):
+    print("--- CATÁLOGO DE PRODUCTOS ---")
+    print(f"{'Código':<8} | {'Nombre':<12} | {'Precio':<8} | {'Stock':<6}")
+    print("-" * 45)
+    
+    # Recorremos cada producto del diccionario
+    for codigo, info in catalogo.items():
+        print(f"{codigo:<8} | {info['nombre']:<12} | ${info['precio']:<7.2f} | {info['stock']:<6}")
+
+# --- CÓDIGO PRINCIPAL (debe ir pegado al margen izquierdo, sin espacios) ---
+mi_catalogo = cargar_catalogo()
+mostrar_catalogo(mi_catalogo)
+
