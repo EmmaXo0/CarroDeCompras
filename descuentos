@@ -1,6 +1,4 @@
 def aplicar_descuento(subtotal, tipo_descuento):
-    """Usa condicionales para aplicar reglas de descuento según la estructura requerida."""
-    # Ejemplo de diccionario de reglas de descuento
     reglas = {
         "3x2": 0.0, # Lógica personalizada o porcentaje
         "VIP": 0.15,
