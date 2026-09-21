@@ -1,0 +1,18 @@
+def aplicar_descuento(subtotal, tipo_descuento):
+    """Usa condicionales para aplicar reglas de descuento según la estructura requerida."""
+    # Ejemplo de diccionario de reglas de descuento
+    reglas = {
+        "3x2": 0.0, # Lógica personalizada o porcentaje
+        "VIP": 0.15,
+        "GENERAL": 0.05
+    }
+    
+    descuento_aplicado = 0.0
+    if tipo_descuento == "VIP" and subtotal > 500:
+        descuento_aplicado = subtotal * 0.15
+    elif tipo_descuento == "GENERAL" and subtotal > 200:
+        descuento_aplicado = subtotal * 0.05
+    else:
+        descuento_aplicado = 0.0
+        
+    return max(0.0, subtotal - descuento_aplicado)
